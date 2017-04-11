@@ -5,7 +5,7 @@ import becker.robots.*;
 
 /**
  * @author Kuldeep and Joshua
- *
+ * Date: April 2017
  */
 public class Droid extends BetterRobot {
 
