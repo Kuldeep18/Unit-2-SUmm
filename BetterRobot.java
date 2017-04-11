@@ -6,7 +6,7 @@ turnRight - Right Turn
 pickrow - Checks if something can be picked up and then picks it up
 checkwall - wall detection, recalibrates if there is an obstacle
 pick thing - picks thing if it can
-*/
+ */
 
 public class BetterRobot extends Robot { //extends Robot's exisiting features onto itself and is made better
 
@@ -44,9 +44,9 @@ public class BetterRobot extends Robot { //extends Robot's exisiting features on
 			}
 		}
 	}
-	
+
 	public void checkWall(int thingStr) { //Wall dectection method, checks for walls and recalibrates movement to avoid them
-		
+
 		if (frontIsClear()) {
 			move(thingStr);
 		}
@@ -60,11 +60,44 @@ public class BetterRobot extends Robot { //extends Robot's exisiting features on
 			turnLeft();
 		}
 	}
-	
+
 	public void pickThing(int steps, boolean check) { //True or false checker for if something is able to be picked up
 		if (canPickThing()) {
 
 		}
 	}
+	public void pickGrid (int rows, int cols){
+		for (int i = 0; i < rows; i++){
+			pickRow(cols);
+			turnRight();
+			pickRow(cols);
+			turnRight();
+		}
 
+	}
+	public void putGrid (int rows, int cols){
+		for(int i = 0; i < rows; i++)
+		{
+			putRow(cols);
+			turnAround();
+			move(cols);
+			if(i<rows-1){
+				turnLeft();
+				move();
+				turnLeft();
+			}
+		}
+	}
+
+
+
+	public void putRow(int cols) {
+		for (int i = 0; i < cols; i ++)
+		{
+			putThing();
+			move();
+		}
+		// TODO Auto-generated method stub
+
+	}
 }

@@ -1,5 +1,5 @@
 // This Class file allows for the user and computer to roll dice and be able to move accordingly in a randomized, generated function.
-Author: Joshua V & Kuldeep M
+//Author: Joshua V & Kuldeep M
 public class Die {
 
 	private int value; //declaring hidden int values
