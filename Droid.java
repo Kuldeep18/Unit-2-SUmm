@@ -80,7 +80,7 @@ public class Droid extends BetterRobot { //Inherits Robot
 			turnLeft();
 			
 		}
-		public static void main (String [] args){
+		public static void main (String [] args){ //Self-Testing Method
 			City galaxy = new City (16, 16);
 			Droid r2d2 = new Droid(galaxy, 3, 4, Direction.EAST, 0);
 			new Wall (galaxy, 4, 6, Direction.WEST);

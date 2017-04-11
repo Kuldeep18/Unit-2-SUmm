@@ -66,7 +66,7 @@ public class BetterRobot extends Robot { //extends Robot's exisiting features on
 
 		}
 	}
-	public void pickGrid (int rows, int cols){
+	public void pickGrid (int rows, int cols){ //Pick Grid
 		for (int i = 0; i < rows; i++){
 			pickRow(cols);
 			turnRight();
@@ -75,7 +75,7 @@ public class BetterRobot extends Robot { //extends Robot's exisiting features on
 		}
 
 	}
-	public void putGrid (int rows, int cols){
+	public void putGrid (int rows, int cols){ //place Grid
 		for(int i = 0; i < rows; i++)
 		{
 			putRow(cols);
@@ -91,7 +91,7 @@ public class BetterRobot extends Robot { //extends Robot's exisiting features on
 
 
 
-	public void putRow(int cols) {
+	public void putRow(int cols) { //Put Row
 		for (int i = 0; i < cols; i ++)
 		{
 			putThing();
