@@ -1,5 +1,13 @@
 import becker.robots.*;
 //This is the class file that Droid draws its movement abilties, object movement, as well as wall detection abilties from.
+/*Method List: Void Move - Move Command
+turnAround - Left Turn
+turnRight - Right Turn
+pickrow - Checks if something can be picked up and then picks it up
+checkwall - wall detection, recalibrates if there is an obstacle
+pick thing - picks thing if it can
+*/
+
 public class BetterRobot extends Robot { //extends Robot's exisiting features onto itself and is made better
 
 	public BetterRobot(City c, int street, int avenue, Direction dir, int numThings) { //declaring and creating our city 
