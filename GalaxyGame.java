@@ -1,8 +1,12 @@
 import becker.robots.*;
 
 /**
- * @author Joshua
- *
+ * @author Joshua and Kuldeep
+ * Date: April 2017
+ * Description: Sets up and creates the droids and galaxy. Walls and things are placed randomly within streets and avenues 2 and 12.
+ * Method List: placeWall(City galaxy) - This method creates at least 20 walls and places them randomly with the galaxy.
+ * 				placeThing(City galaxy) - This method creates a minimum of 512 things in the galaxy which are randomly placed throughout.
+ * 				main(String[] args) - This method calls from the other methods to create the actual galaxy.
  */
 public class GalaxyGame {
 
@@ -50,7 +54,7 @@ public class GalaxyGame {
 
 		}
 	}
-
+	
 	public static void placeThing(City galaxy) {
 		int thingAve, thingStr;
 		Thing t[];
@@ -79,13 +83,14 @@ public class GalaxyGame {
 	public static void main(String[] args) {
 
 		City galaxy = new City(0, 0, 15, 15, 40);
-
-		// Droid r2d2 = new Droid (galaxy, 0, 0, Direction.EAST, 0);
-		// Droid c3p0 = new Droid (galaxy, 0, 15, Direction.EAST, 0);
-
 		
 		placeThing(galaxy);	
 		placeWall(galaxy);
+
+		Droid r2d2 = new Droid (galaxy, 0, 0, Direction.EAST, 0);
+		Droid c3p0 = new Droid (galaxy, 0, 14, Direction.WEST, 0);
+
+		r2d2.move(10);
 
 
 	}
