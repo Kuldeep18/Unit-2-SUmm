@@ -113,6 +113,9 @@ public class GalaxyGame {
 		// Declare int variable.
 		int a;
 		
+		// For loop which will roll the die and tell the droids what to do until the amount of things 
+		for (int i = 0; i < 512; i++) {
+		
 		// Roll dice to determine the number of things to be picked up
 		d1.rollDie();
 		d2.rollDie();
@@ -128,6 +131,8 @@ public class GalaxyGame {
 		a = d1.getValue() + d2.getValue();
 		
 		//c3p0.
+		
+		}
 	}
 
 }
